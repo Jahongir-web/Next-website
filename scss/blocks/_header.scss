@@ -4,6 +4,10 @@
 
 .header-site-nav {
   background-color: #131313;
+}
+
+.header-site-nav__container {
+  display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,28 +19,128 @@
 .header-site-nav__logo {
   background-color: #ff8177;
   background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-}
-
-.header-site-nav__mobile-menu {
-
-}
-
-.mobile-menu__item {
-
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 2rem;
+  margin-right: auto;
 }
 
 .header-site-nav__menu-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
 }
 
 .header-site-nav__menu-item {
-
+  line-height: 80px;
 }
 
 .header-site-nav__menu-link {
-
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 16px;
+  transition: 0.3s ease;
+  &:hover{
+    color: #f77062;
+  }
 }
 
 .header-site-nav__menu-button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #f77062;
+  color: #ffffff;
+  white-space: nowrap;
+  margin-left: 16px;
+  transition: 0.3s ease;
+  &:hover{
+    background-color: #4837ff;
 
+  }
+}
+
+
+
+@include breakpoint-down (768) {
+  .header-site-nav__container {
+    padding: 0 20px;
+  }
+
+  .header-site-nav__menu-list {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: -1;
+  }
+
+  .header-site-nav__menu-list.active {
+    background-color: #131313;
+    top: 10%;
+    opacity: 1;
+    transition: 0.5s ease;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+
+  }
+
+  .header-site-nav__logo {
+    padding-left: 25px;
+    margin-top: 15px;
+  }
+
+
+  .header-site-nav__menu-button {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 62px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .header-site-nav__toggle-btn {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    cursor: pointer;
+  }
+
+  .toggle-btn__item {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 0.3s ease-in-out;
+    background-color: #fff;
+    display: block;
+  }
+
+  .header-site-nav__toggle-btn.is-active .toggle-btn__item{
+    transition: 0.3s ease;
+
+    &:nth-child(2){
+      opacity: 0;
+    }
+
+    &:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
 }
