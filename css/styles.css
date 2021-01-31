@@ -527,8 +527,10 @@ img {
     font-size: 1.6rem;
   }
   .header-site-nav__logo {
-    padding-left: 25px;
-    margin-top: 15px;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
   }
   .header-site-nav__menu-button {
     display: block;
