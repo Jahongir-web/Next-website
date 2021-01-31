@@ -1,0 +1,152 @@
+.main-site {
+  background-color: #141414;
+}
+
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: #141414;
+  z-index: 1;
+  width: 100%;
+
+}
+
+.hero__content {
+  width: 50%;
+}
+
+.hero__heading {
+  font-size: 64px;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-transform: uppercase;
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+
+  &:nth-child(2) {
+  background-image: linear-gradient(to top, #ff216b 0%, #21d4fd 100%);
+  }
+
+}
+
+.hero__text {
+  margin-top: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
+
+.hero__btn {
+  display: inline-block;
+  position: relative;
+  transition: 0.3s ease;
+  margin-top: 32px;
+  padding: 10px 0;
+  z-index: 2;
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+  border-radius: 3px;
+
+  &::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #4837ff;
+    transition: 0.3s ease;
+    border-radius: 3px;
+  }
+
+  &:hover::after {
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.hero__btn-text {
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 500;
+  z-index: 20;
+}
+
+.hero__img-box {
+  width: 50%;
+  text-align: right;
+}
+
+.hero__img {
+  height: 80%;
+  width: 90%;
+}
+
+@include breakpoint-down (1000) {
+  .hero__heading {
+    font-size: 48px;
+  }
+}
+
+@include breakpoint-down (768) {
+  .hero__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__img-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  .hero__heading {
+    font-size: 40px;
+    text-align: center;
+    &:nth-child(1){
+      margin-top: 32px;
+    }
+
+    &:nth-child(2){
+      font-size: 48px;
+      margin-top: -20px;
+    }
+  }
+
+  .hero__text {
+    text-align: center;
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+  }
+}
+
+
+@include breakpoint-down (480) {
+  .hero__heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+    &:nth-child(2){
+      font-size: 32px;
+    }
+  }
+}
