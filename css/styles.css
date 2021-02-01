@@ -862,6 +862,7 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .services__card {
     background-image: url(../img/boy@2x.jpg);
+    background-repeat: no-repeat;
   }
   .services__card:nth-child(2) {
     background-image: url(../img/girl@2x.jpg);
