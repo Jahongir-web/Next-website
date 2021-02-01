@@ -493,6 +493,10 @@ img {
   color: #f77062;
 }
 
+.active {
+  border-bottom: 1px solid #f77062;
+}
+
 .header-site-nav__menu-button {
   text-decoration: none;
   padding: 10px 20px;
@@ -606,6 +610,24 @@ img {
   width: 100%;
 }
 
+.product {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product .hero__content {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product .hero__content .hero__btn {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .hero__content {
   width: 50%;
 }
@@ -682,6 +704,39 @@ img {
   text-align: right;
 }
 
+.product .hero__img-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.product-img-box {
+  max-width: 350px;
+  width: 100%;
+  height: 485px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.product-img {
+  width: 350px;
+  height: 485px;
+  border-radius: 10px;
+}
+
+.product-video {
+  width: 90%;
+  height: 570px;
+  border: none;
+  border-radius: 8px;
+}
+
 .hero__img {
   height: 80%;
   width: 90%;
@@ -690,6 +745,12 @@ img {
 @media only screen and (max-width: 1000px) {
   .hero__heading {
     font-size: 48px;
+  }
+  .product-video {
+    height: 370px;
+  }
+  .product {
+    margin-bottom: 0;
   }
 }
 
@@ -702,6 +763,9 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .product-video {
+    height: 250px;
   }
   .hero__img-box {
     width: 100%;
@@ -748,6 +812,18 @@ img {
   }
   .hero__heading:nth-child(2) {
     font-size: 32px;
+  }
+  .product-video {
+    height: 200px;
+  }
+  .product {
+    padding: 0 20px;
+  }
+  .product-img-box {
+    margin-right: 0;
+  }
+  .product .hero__img-box {
+    margin-bottom: 0px;
   }
 }
 
@@ -844,15 +920,27 @@ img {
   .services {
     height: 1200px;
   }
+  .product-services {
+    height: 500px;
+  }
   .services__heading {
     font-size: 32px;
     margin-top: 140px;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .product-services {
+    height: 300px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .services {
     height: 1150px;
+  }
+  .product-services {
+    height: 250px;
   }
   .services__heading {
     font-size: 20px;

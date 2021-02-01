@@ -90,15 +90,29 @@
     height: 1200px;
   }
 
+  .product-services {
+    height: 500px;
+  }
+
   .services__heading {
     font-size: 32px;
     margin-top: 140px;
   }
 }
 
+@include breakpoint-down (768) {
+  .product-services {
+    height: 300px;
+  }
+}
+
 @include breakpoint-down (480) {
   .services {
     height: 1150px;
+  }
+
+  .product-services {
+    height: 250px;
   }
 
   .services__heading {
