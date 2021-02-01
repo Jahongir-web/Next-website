@@ -27,6 +27,10 @@
   font-size: 32px;
   margin-right: auto;
   text-transform: uppercase;
+  transition: 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .header-site-nav__menu-list {

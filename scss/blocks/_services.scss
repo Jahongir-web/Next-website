@@ -2,6 +2,7 @@
 .services {
   text-align: center;
   height: 100vh;
+  margin-bottom: 10px;
 }
 
 .services__heading {
@@ -86,7 +87,7 @@
 
 @include breakpoint-down (970) {
   .services {
-    height: 1300px;
+    height: 1200px;
   }
 
   .services__heading {
@@ -97,7 +98,7 @@
 
 @include breakpoint-down (480) {
   .services {
-    height: 1300px;
+    height: 1150px;
   }
 
   .services__heading {
